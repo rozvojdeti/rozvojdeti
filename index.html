@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Čo je autizmus | Rozvoj detí</title>
+    <title>O autizme | Rozvoj detí</title>
     <style>
         :root {
-            --primary-color: #1a365d;
-            --accent-color: #3182ce;
-            --bg-color: #f7fafc;
-            --card-bg: #ffffff;
-            --text-main: #2d3748;
-            --text-muted: #718096;
-            --border-radius: 12px;
-            --highlight-bg: #ebf8ff;
-        }
-
-        * {
-            box-sizing: border-box;
+            --primary-color: #023e8a;
+            --secondary-color: #0077b6;
+            --accent-color: #90e0ef;
+            --bg-color: #f4f7f6;
+            --content-bg: #ffffff;
+            --text-color: #2b2d42;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
-            color: var(--text-main);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
@@ -31,115 +27,149 @@
 
         /* HLAVIČKA */
         header {
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            background-color: var(--primary-color);
             color: white;
-            text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         header h1 {
-            margin: 10px 0 0 0;
-            font-size: 2.4rem;
+            margin: 0;
+            font-size: 2.2rem;
         }
 
-        header a {
-            color: #90cdf4;
+        .back-link {
+            color: var(--accent-color);
             text-decoration: none;
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: bold;
         }
 
-        header a:hover {
+        .back-link:hover {
             text-decoration: underline;
         }
 
-        /* OBSAHOVÝ KONTAJNER */
-        .container {
-            max-width: 850px;
-            background: var(--card-bg);
-            margin: -30px auto 40px auto;
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        /* HLAVNÉ ROZLOŽENIE (STRÁNKA + BOČNÝ PANEL) */
+        .wrapper {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
         }
 
-        .breadcrumb {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        @media (max-width: 768px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .breadcrumb a {
-            color: var(--accent-color);
-            text-decoration: none;
+        /* BOČNÉ MENU (SIDEBAR) */
+        aside {
+            background: var(--content-bg);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
         }
 
-        h2 {
+        aside h3 {
             color: var(--primary-color);
-            margin-top: 35px;
-            border-bottom: 2px solid #edf2f7;
+            margin-top: 0;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        aside a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        aside a:hover, aside a.active {
+            background-color: #eef4f8;
+            font-weight: bold;
+        }
+
+        /* HLAVNÝ OBSAH (ARTICLE) */
+        main {
+            background: var(--content-bg);
+            padding: 40px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        main h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
         }
 
-        h3 {
-            color: var(--accent-color);
-            margin-top: 25px;
+        main h3 {
+            color: var(--secondary-color);
+            margin-top: 30px;
         }
 
         p {
-            margin-bottom: 18px;
-            font-size: 1.05rem;
+            margin-bottom: 20px;
         }
 
-        ul {
+        ul, ol {
             margin-bottom: 20px;
             padding-left: 20px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        /* ŠTATISTICKÝ/INFORMAČNÝ BOX (SPOSA ŠTÝL) */
-        .stat-box {
-            background-color: var(--highlight-bg);
-            border-left: 5px solid var(--accent-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-        }
-
-        .stat-box h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-
-        /* CITÁT */
-        blockquote {
-            background: #f7fafc;
-            border-left: 4px solid #cbd5e0;
-            margin: 25px 0;
+        /* ZVÝRAZNENÝ BOX */
+        .info-box {
+            background-color: #f1f8fc;
+            border-left: 4px solid var(--secondary-color);
             padding: 15px 20px;
-            font-style: italic;
-            color: #4a5568;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
         }
 
         /* PÄTIČKA */
         footer {
-            background: var(--card-bg);
+            background-color: #212529;
+            color: white;
             text-align: center;
-            padding: 30px 20px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-top: 40px;
+            padding: 25px 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
         }
 
         footer a {
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: 600;
         }
 
         footer a:hover {
@@ -150,76 +180,58 @@
 <body>
 
     <header>
-        <a href="../index.html">&larr; Späť na hlavnú stránku</a>
-        <h1>Čo je autizmus?</h1>
+        <div class="header-container">
+            <a href="../index.html" class="back-link">&larr; Späť na hlavnú stránku portálu</a>
+            <h1>Rozvoj detí &ndash; Odborné informácie</h1>
+        </div>
     </header>
 
-    <div class="container">
+    <div class="wrapper">
+        <!-- BOČNÉ MENU -->
+        <aside>
+            <h3>Témy a sekcie</h3>
+            <ul>
+                <li><a href="#" class="active">Čo je autizmus</a></li>
+                <li><a href="#">Diagnostika a prejavy</a></li>
+                <li><a href="#">Zmyslové vnímanie</a></li>
+                <li><a href="#">Vzdelávanie a škola</a></li>
+                <li><a href="#">Poradenstvo a pomoc</a></li>
+            </ul>
+        </aside>
 
-        <div class="breadcrumb">
-            <a href="../index.html">Domov</a> / <span>Autizmus (PAS)</span> / <strong>Čo je autizmus</strong>
-        </div>
+        <!-- OBSAH ČLÁNKU -->
+        <main>
+            <h2>Čo je autizmus</h2>
+            <p><strong>Autizmus</strong> (alebo poruchy autistického spektra &ndash; PAS) je celoživotná vývinová porucha, ktorá ovplyvňuje spôsob, akým človek komunikuje, chápe okolitý svet a nadväzuje vzťahy s inými ľuďmi.</p>
 
-        <p class="lead"><strong>Poruchy autistického spektra (PAS)</strong> sú skupinou porúch mentálneho vývoja, ktorú skrátene nazývame autizmus. Autizmus totiž nie je len „jeden“ – ide o celú skupinu porúch, ktoré majú rozdielne prejavy a dôsledky.</p>
+            <div class="info-box">
+                <p style="margin: 0;"><strong>Vedeli ste, že?</strong> Podľa aktuálnych štatistík sa poruchy autistického spektra prejavujú približne u 1 zo 100 detí. Ide o stav, ktorý nie je chorobou, ale iným nastavením nervovej sústavy.</p>
+            </div>
 
-        <div class="stat-box">
-            <h3>Ako veľmi je rozšírený?</h3>
-            <p><strong>1 zo 100 detí:</strong> Výskumy z posledných rokov potvrdzujú, že autizmus je bežnejší, než sa v minulosti predpokladalo. Postihuje ľudí bez ohľadu na rasu, náboženstvo či sociálno-ekonomické postavenie.</p>
-        </div>
+            <h3>Hlavné oblasti postihnutia</h3>
+            <p>Prejavy autizmu sú veľmi rôznorodé, no tradične sa hovorí o troch kľúčových oblastiach (tzv. triáda postihnutia):</p>
+            <ul>
+                <li><strong>Sociálna interakcia:</strong> Ťažkosti pri nadväzovaní očného kontaktu, nerozpoznávanie emócií iných ľudí, tendencia vyhľadávať samotu.</li>
+                <li><strong>Sociálna komunikácia:</strong> Oneskorený vývin reči, doslovné chápanie slov, alebo absencia reči (u neverbálnych detí), pričom využívajú alternatívne spôsoby komunikácie.</li>
+                <li><strong>Sociálna predstavivosť:</strong> Preferencia rutiny, lipnutie na rovnakých pravidlách, stereotypné správanie a obmedzené, no často veľmi hlboké záujmy.</li>
+            </ul>
 
-        <h2>Odborná definícia</h2>
-        <p>Odborníci definujú autizmus ako <strong>mentálne postihnutie</strong>, ktoré:</p>
-        <ul>
-            <li>Jedincovi bráni efektívne triediť informácie a porozumieť im.</li>
-            <li>Výrazne ovplyvňuje komunikáciu jedinca s ostatnými a jeho vnímanie okolitého sveta.</li>
-            <li>Narušuje vývoj dieťaťa v troch hlavných oblastiach: <strong>komunikácia, sociálna interakcia a predstavivosť</strong>.</li>
-        </ul>
+            <h3>Prečo hovoríme o „spektre“?</h3>
+            <p>Každý človek s autizmom je jedinečný. Niektorí ľudia s PAS potrebujú celoživotnú podporu a asistenciu pri každodenných úkonoch, kým iní (často s Aspergerovým syndrómom) sú samostatní, majú bežnú alebo nadpriemernú inteligenciu, no čelia výzvam v sociálnych situáciách.</p>
 
-        <h2>Typy sociálneho správania</h2>
-        <p>Na základe sociálneho správania rozlišujeme u detí s PAS tri hlavné typy prejavov:</p>
-        <ul>
-            <li><strong>Uzavreté správanie:</strong> Jedinec sa necíti dobre v kolektíve, aktívne sa vyhýba ľuďom a kontakt s okolím preňho môže byť stresujúci.</li>
-            <li><strong>Pasívne správanie:</strong> Jedinec nevyhľadáva kontakt s ľuďmi, no ak ho niekto osloví, pasívne ho prijme.</li>
-            <li><strong>Aktívne, ale zvláštne správanie:</strong> Prijíma spoločnosť iných, no v komunikácii sa prejavuje neobvyklým spôsobom (napríklad klade stále tie isté stereotypné otázky).</li>
-        </ul>
-
-        <h2>Klasifikácia porúch autistického spektra</h2>
-        <p>Podľa diagnostických kritérií sa poruchy autistického spektra klasifikujú na viacero podtypov:</p>
-
-        <h3>1. Detský autizmus</h3>
-        <p>Prejavuje sa zvyčajne do 3 rokov života. Charakteryzujú ho výrazné abnormality v sociálnej interakcii, komunikácii a prítomnosť opakujúceho sa (stereotypného) správania.</p>
-
-        <h3>2. Aspergerov syndróm</h3>
-        <p>Na rozdiel od detského autizmu pri Aspergerovom syndróme <strong>reč a kognitívny vývoj nezaostávajú</strong>. Deti majú často normálnu až nadpriemernú inteligenciu, no čelia výzvam v sociálnych vzťahoch, nadväzovaní očného kontaktu a chápaní emócií druhých.</p>
-
-        <h3>3. Atypický autizmus</h3>
-        <p>Prejavuje sa po 3. roku života alebo abnormality nie sú prítomné vo všetkých troch hlavných kategóriách.</p>
-
-        <h3>4. Iná dezintegračná porucha a ďalšie podtypy</h3>
-        <p>Zahŕňa prípady, kedy sa dieťa do 2 rokov vyvíja normálne a následne dochádza k strate získaných zručností (reč, sociálne návyky).</p>
-
-        <blockquote>
-            "Autizmus nie je niečo, čo osoba má, nie je to ulita, v ktorej je osoba uväznená. Autizmus je spôsob bytia a vnímania sveta."
-        </blockquote>
-
-        <h2>Desať vecí, ktoré by dieťa s autizmom chcelo, aby ste vedeli</h2>
-        <ul>
-            <li>V prvom rade som <strong>dieťa</strong> a až potom mám autizmus.</li>
-            <li>Mám narušené zmyslové vnímanie.</li>
-            <li>Nezabudnite rozlišovať medzi <em>nechcem</em> (moje rozhodnutie) a <em>nemôžem</em> (nedokážem).</li>
-            <li>Premýšľam konkrétne – reč chápem doslovne.</li>
-            <li>Majte trpezlivosť s mojou obmedzenou slovnou zásobou.</li>
-            <li>Stavajte na tom, čo dokážem, nie na tom, čo nedokážem.</li>
-            <li>Ak ste členom mojej rodiny, milujte ma bez výhrad.</li>
-        </ul>
-
-        <!-- PÄTIČKA -->
-        <footer>
-            <p>Máte otázky alebo hľadáte podporu? Napíšte nám e-mail na: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #a0aec0;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
-        </footer>
-
+            <h3>Ako pristupovať k deťom s autizmom?</h3>
+            <ol>
+                <li><strong>Zabezpečte predvídateľnosť:</strong> Pomocou denného režimu, vizuálnych harmonogramov a obrázkov.</li>
+                <li><strong>Buďte trpezliví v komunikácii:</strong> Hovorte jasne, vecne, vyhnite sa irónii a metaforám.</li>
+                <li><strong>Rešpektujte ich zmysulné vnímanie:</strong> Uvedomte si, že hluk, ostré svetlo alebo dotyky môžu u dieťaťa vyvolať obrovský stres.</li>
+            </ol>
+        </main>
     </div>
+
+    <footer>
+        <p>Máte otázky alebo potrebujete poradiť? Kontaktujte nás na: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
+        <p style="margin-top: 10px; color: #adb5bd;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
+    </footer>
 
 </body>
 </html>

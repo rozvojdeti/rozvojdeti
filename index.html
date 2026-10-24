@@ -1,153 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rozvoj detí s porozumením – informácie a podpora pre rodičov detí s autizmom, ADHD a ďalšími vývinovými ťažkosťami.">
-  <meta name="theme-color" content="#315c55">
-  <title>Rozvoj detí s porozumením | Podpora pre rodičov</title>
-  <style>
-    :root{--green:#315c55;--green2:#eaf2ef;--gold:#d9b76e;--ink:#253330;--muted:#5e6c68;--paper:#fffdf8}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
-    a{color:var(--green)}
-    .wrap{width:min(1100px,92%);margin:auto}
-    header{background:white;border-bottom:1px solid #e7ece9;position:sticky;top:0;z-index:5}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}
-    .brand{font-weight:800;color:var(--green);text-decoration:none;font-size:1.1rem}
-    nav{display:flex;gap:18px;flex-wrap:wrap}
-    nav a{text-decoration:none;font-size:.94rem;font-weight:700}
-    .hero{background:linear-gradient(120deg,#eaf2ef 0%,#fffdf8 72%);padding:76px 0 70px}
-    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
-    .eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:.78rem}
-    h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;letter-spacing:-.04em;margin:12px 0 20px;color:#203d38}
-    h2{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.2;margin:0 0 18px;color:#203d38}
-    h3{margin:0 0 10px;color:#284b44}
-    p{margin:0 0 15px}
-    .lead{font-size:1.12rem;max-width:690px;color:#43534f}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-    .btn{display:inline-block;padding:12px 19px;border-radius:8px;text-decoration:none;font-weight:700;border:2px solid var(--green)}
-    .btn.primary{background:var(--green);color:white}
-    .btn.secondary{color:var(--green);background:transparent}
-    .hero-art{background:white;border:1px solid #dbe6e1;border-radius:24px;padding:30px;box-shadow:0 18px 45px #294b4110}
-    .circle{width:100%;aspect-ratio:1;max-width:260px;margin:auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 14%,#dbe9e3 15% 48%,#b8d0c6 49% 68%,#e9d9b2 69%);display:grid;place-items:center;font-size:5rem}
-    .section{padding:68px 0}
-    .section.alt{background:#f0f5f2}
-    .intro{max-width:740px;color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .card{background:white;border:1px solid #e0e8e3;border-radius:14px;padding:24px;box-shadow:0 8px 22px #203d3808}
-    .icon{font-size:1.8rem;margin-bottom:12px}
-    .pill{display:inline-block;border-radius:30px;background:var(--green2);padding:5px 10px;color:var(--green);font-size:.83rem;font-weight:700;margin:4px 4px 4px 0}
-    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
-    .step{background:white;border-radius:12px;padding:22px;border:1px solid #e0e8e3}
-    .step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);font-weight:800;margin-bottom:14px}
-    .note{background:#fff7df;border-left:4px solid var(--gold);padding:16px 18px;border-radius:4px;color:#594a2d}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-    form{display:grid;gap:12px}
-    label{font-weight:700;font-size:.92rem}
-    input,textarea{font:inherit;padding:12px;border:1px solid #cbd7d1;border-radius:8px;width:100%;background:white}
-    textarea{min-height:120px;resize:vertical}
-    button{font:inherit;cursor:pointer}
-    .small{font-size:.88rem;color:var(--muted)}
-    footer{background:#203d38;color:#eaf2ef;padding:28px 0}
-    footer a{color:white}
-    @media(max-width:760px){.hero-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:52px 0}.hero-art{max-width:340px}.cards,.steps{grid-template-columns:1fr}nav{gap:10px}.nav{align-items:flex-start;flex-direction:column}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozvoj detí | Hlavná stránka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header, section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }
+        h3 { color: #2980b9; margin-top: 15px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover { background-color: #219653; }
+    </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#domov">Rozvoj detí s porozumením</a>
-    <nav aria-label="Hlavná navigácia">
-      <a href="#o-projekte">O nás</a>
-      <a href="#temy">Témy</a>
-      <a href="#spolupraca">Ako pomáhame</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="hero" id="domov">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Podpora pre deti a ich rodiny</div>
-        <h1>Každé dieťa si zaslúži porozumenie.</h1>
-        <p class="lead">Priestor pre rodičov, ktorí hľadajú zrozumiteľné informácie, povzbudenie a praktické podnety pri podpore detí s autizmom, ADHD a ďalšími vývinovými ťažkosťami.</p>
-        <div class="actions">
-          <a class="btn primary" href="#temy">Pozrieť témy</a>
-          <a class="btn secondary" href="#kontakt">Kontaktovať nás</a>
-        </div>
-      </div>
-      <div class="hero-art" aria-label="Ilustračná grafika">
-        <div class="circle" aria-hidden="true">🌱</div>
-        <p style="text-align:center;margin:18px 0 0;font-weight:700;color:#315c55">Malé kroky. Bezpečie. Porozumenie.</p>
-      </div>
-    </div>
-  </section>
+    <header>
+        <h1>Rozvoj detí</h1>
+        <p>Informačný portál a podporné materiály pre rodičov a pedagógov</p>
+    </header>
 
-  <section class="section" id="o-projekte">
-    <div class="wrap">
-      <h2>Rozvoj s rešpektom k jedinečnosti dieťaťa</h2>
-      <p class="intro">Každé dieťa komunikuje, učí sa a prežíva svet svojím spôsobom. Naším cieľom je prinášať rodičom užitočné informácie a podnety, ktoré môžu podporiť porozumenie dieťaťu a každodenné fungovanie rodiny.</p>
-      <p class="intro">Obsah stránky je všeobecne informačný. Nenahrádza individuálne vyšetrenie a diagnostiku.</p>
-    </div>
-  </section>
+    <main>
+        <section>
+            <h2>📚 Kategórie článkov</h2>
 
-  <section class="section alt" id="temy">
-    <div class="wrap">
-      <h2>Čomu sa venujeme</h2>
-      <p class="intro">Postupne budeme pridávať články, praktické tipy a odpovede na otázky rodičov.</p>
-      <div class="cards">
-        <article class="card"><div class="icon">🧩</div><h3>Autizmus (PAS)</h3><p>Porozumenie komunikácii, zmyslovým potrebám, rutine a individuálnemu spôsobu učenia dieťaťa.</p><span class="pill">Komunikácia</span><span class="pill">Každodenné situácie</span></article>
-        <article class="card"><div class="icon">🌿</div><h3>ADHD a pozornosť</h3><p>Podnety k organizácii dňa, podpore pozornosti, zvládaniu emócií a budovaniu predvídateľného prostredia.</p><span class="pill">Pozornosť</span><span class="pill">Emócie</span></article>
-        <article class="card"><div class="icon">💛</div><h3>Rozvoj a učenie</h3><p>Hravé aktivity, rozvoj samostatnosti, spolupráca s rodinou a hľadanie toho, čo konkrétnemu dieťaťu pomáha.</p><span class="pill">Hra</span><span class="pill">Samostatnosť</span></article>
-      </div>
-    </div>
-  </section>
+            <!-- Kategória 1 -->
+            <h3>🧩 Autizmus (PAS)</h3>
+            <ul>
+                <li><a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a></li>
+            </ul>
 
-  <section class="section" id="spolupraca">
-    <div class="wrap">
-      <h2>Ako môžeme začať</h2>
-      <p class="intro">Prvý krok môže byť jednoduchý – rodič opíše, čo ho trápi a v akej situácii potrebuje podporu. Ďalší postup závisí od konkrétnych potrieb dieťaťa a rodiny.</p>
-      <div class="steps">
-        <div class="step"><h3>Napíšte nám</h3><p>Stručne opíšte svoju otázku alebo situáciu, s ktorou potrebujete pomôcť.</p></div>
-        <div class="step"><h3>Spoločne si ujasníme potreby</h3><p>Ujasníme si, čo je pre vás dôležité a aké informácie môžu byť užitočné.</p></div>
-        <div class="step"><h3>Dohodneme ďalší krok</h3><p>Navrhneme primeraný informačný alebo konzultačný postup podľa možností a potrieb.</p></div>
-      </div>
-  
+            <!-- Kategória 2 -->
+            <h3>⚡ ADHD a pozornosť</h3>
+            <ul>
+                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
+            </ul>
 
-  <section class="section alt" id="kontakt">
-    <div class="wrap contact-grid">
-      <div>
-        <h2>Kontakt</h2>
-        <p>Máte otázku alebo sa chcete poradiť? Napíšte nám. Radi si vypočujeme, čo potrebujete riešiť.</p>
-        <p><strong>Pôsobnosť:</strong> Žilina a okolie </p>
-        <p><strong>E-mail:</strong> <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
-        <div class="note"><strong>Dôležité:</strong> Neposielajte cez bežný kontaktný formulár citlivé zdravotné údaje ani dokumentáciu dieťaťa. Najprv sa dohodnite na bezpečnom spôsobe komunikácie.</div>
-      </div>
-      <div class="card">
-        <h3>Napíšte nám</h3>
-        <p class="small"></p>
-        <form name="kontakt" method="POST" action="/" netlify>
-          <div><label for="meno">Vaše meno</label><input id="meno" name="meno" autocomplete="name" placeholder="Meno"></div>
-          <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Tu zadajte váš email"></div>
-          <div><label for="sprava">Vaša otázka</label><textarea id="sprava" name="sprava" placeholder="Stručne napíšte, s čím potrebujete poradiť."></textarea></div>
-          <button type="submit" class="btn primary">Odoslať správu</button>
+            <!-- Kategória 3 -->
+            <h3>🌱 Rozvoj a učenie</h3>
+            <ul>
+                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
+            </ul>
+
+            <!-- Kategória 4 -->
+            <h3>✍️ Dysgrafia</h3>
+            <ul>
+                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Kontaktný formulár -->
+    <section>
+        <h2>📩 Kontaktujte nás</h2>
+        <form name="contact" method="POST" data-netlify="true">
+            <p>
+                <label>Váš e-mail:<br><input type="email" name="email" required></label>
+            </p>
+            <p>
+                <label>Správa:<br><textarea name="message" rows="4" required></textarea></label>
+            </p>
+            <p>
+                <button type="submit">Odoslať</button>
+            </p>
         </form>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="wrap">
-    <strong>Rozvoj detí s porozumením</strong>
-    <p class="small" style="color:#d6e3dd;margin:8px 0 0">Informačný web pre rodičov. </p>
-    <p class="small" style="color:#d6e3dd;margin:8px 0 0">© <span id="year"></span> Rozvoj detí s porozumením</p>
-  </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -65,9 +65,6 @@
         }
 
         .category-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             border-bottom: 2px solid #edf2f7;
             padding-bottom: 12px;
             margin-bottom: 25px;
@@ -164,6 +161,7 @@
             padding: 35px;
             border-radius: var(--border-radius);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 35px;
         }
 
         .contact-section h2 {
@@ -216,11 +214,29 @@
             background-color: #2c5282;
         }
 
+        /* PÄTIČKA S KONTAKTOM */
         footer {
+            background: var(--card-bg);
             text-align: center;
-            padding: 30px;
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -248,7 +264,7 @@
                     </div>
                 </div>
 
-                <!-- Pripravovaný článok 2 -->
+                <!-- Pripravovaný článok -->
                 <div class="article-card placeholder">
                     <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80" alt="Komunikácia">
                     <div class="article-body">
@@ -269,7 +285,7 @@
                 <div class="article-card placeholder">
                     <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Sústredenie">
                     <div class="article-body">
-                        <h3>Jak udržať pozornosť pri učení</h3>
+                        <h3>Ako udržať pozornosť pri učení</h3>
                         <p>Jednoduché techniky a úpravy prostredia pre školákov.</p>
                         <span class="tag-coming-soon">Pripravujeme</span>
                     </div>
@@ -279,7 +295,7 @@
                     <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=600&q=80" alt="Pohyb a neklud">
                     <div class="article-body">
                         <h3>Pohybové prestávky a ich význam</h3>
-                        <p>Ako efektívne vybijeť energiu pred plnením úloh.</p>
+                        <p>Ako efektívne vybiť energiu pred plnením úloh.</p>
                         <span class="tag-coming-soon">Pripravujeme</span>
                     </div>
                 </div>
@@ -293,4 +309,56 @@
             </div>
             <div class="articles-grid">
                 <div class="article-card placeholder">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Hry
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Hry pre rozvoj">
+                    <div class="article-body">
+                        <h3>Hry na podporu jemnej motoriky</h3>
+                        <p>Zábavné aktivity pre predškolákov a mladších žiakov.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KATEGÓRIA 4: DYSGRAFIA -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>✍️ Dysgrafia</h2>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card placeholder">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Písanie">
+                    <div class="article-body">
+                        <h3>Správny úchop pera a cvičenia</h3>
+                        <p>Ako pomôcť deťom, ktoré pociťujú únavu a bolesť pri písaní.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAKTNÝ FORMULÁR -->
+        <section class="contact-section">
+            <h2>📩 Napíšte nám správu</h2>
+            <form name="contact" method="POST" data-netlify="true">
+                <div class="form-group">
+                    <label for="email">Váš e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="napriklad@email.sk">
+                </div>
+                <div class="form-group">
+                    <label for="message">Správa:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Napíšte nám vašu otázku..."></textarea>
+                </div>
+                <button type="submit">Odoslať správu</button>
+            </form>
+        </section>
+
+        <!-- PÄTIČKA S KONTAKTOM -->
+        <footer>
+            <p>Ak nám chcete napísať, kontaktujte nás emailom: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #a0aec0;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

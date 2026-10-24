@@ -52,56 +52,8 @@
             max-width: 650px;
             margin: 0 auto;
         }
-<!-- POSÚVACÍ TEXT (BEŽIACI RIADOK) -->
-<div class="marquee-container">
-    <div class="marquee-text">
-        📢 Vitajte na portáli Rozvoj detí! &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; 
-        Nový článok: <a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; 
-        Máte otázky? Napíšte nám na <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a>
-    </div>
-</div>
 
-<style>
-    /* Štýly pre posúvací text */
-    .marquee-container {
-        background-color: #ebf8ff; /* Jemná svetlomodrá farba pozadia */
-        color: #1e3a8a; /* Farba textu */
-        padding: 12px 0;
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        border-top: 1px solid #b3e0fc;
-        border-bottom: 1px solid #b3e0fc;
-        margin-bottom: 30px; /* Odstup od ďalšieho obsahu */
-    }
 
-    .marquee-text {
-        display: inline-block;
-        padding-left: 100%;
-        animation: marquee 25s linear infinite; /* 25s určuje rýchlosť pohybu (menšie číslo = rýchlejšie) */
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    /* Zastavenie pohybu pri prechode myšou (voliteľné pre pohodlné čítanie) */
-    .marquee-container:hover .marquee-text {
-        animation-play-state: paused;
-    }
-
-    .marquee-text a {
-        color: #0d9488;
-        text-decoration: underline;
-    }
-
-    .marquee-text a:hover {
-        color: #1e3a8a;
-    }
-
-    /* Animácia posúvania */
-    @keyframes marquee {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(-100%, 0); }
-    }
 </style>
         /* KONTAJNER OBSAHU */
         .container {
@@ -319,6 +271,57 @@
         <h1>Rozvoj detí</h1>
         <p>Informačný portál, odborné články a podporné materiály pre rodičov</p>
     </header>
+    <!-- POSÚVACÍ TEXT (BEŽIACI RIADOK) -->
+<div class="marquee-container">
+    <div class="marquee-text">
+        📢 Vitajte na portáli Rozvoj detí! &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; 
+        Nový článok: <a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; 
+        Máte otázky? Napíšte nám na <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a>
+    </div>
+</div>
+
+<style>
+    /* Štýly pre posúvací text */
+    .marquee-container {
+        background-color: #ebf8ff; /* Jemná svetlomodrá farba pozadia */
+        color: #1e3a8a; /* Farba textu */
+        padding: 12px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        border-top: 1px solid #b3e0fc;
+        border-bottom: 1px solid #b3e0fc;
+        margin-bottom: 30px; /* Odstup od ďalšieho obsahu */
+    }
+
+    .marquee-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 25s linear infinite; /* 25s určuje rýchlosť pohybu (menšie číslo = rýchlejšie) */
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    /* Zastavenie pohybu pri prechode myšou (voliteľné pre pohodlné čítanie) */
+    .marquee-container:hover .marquee-text {
+        animation-play-state: paused;
+    }
+
+    .marquee-text a {
+        color: #0d9488;
+        text-decoration: underline;
+    }
+
+    .marquee-text a:hover {
+        color: #1e3a8a;
+    }
+
+    /* Animácia posúvania */
+    @keyframes marquee {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+</style>
 
     <div class="container">
 

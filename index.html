@@ -3,50 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rozvoj detí | Hlavná stránka</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header, section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        h1 { color: #2c3e50; }
-        h2 { color: #34495e; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }
-        h3 { color: #2980b9; margin-top: 15px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        form button {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        form button:hover { background-color: #219653; }
-    </style>
+    <title>Rozvoj detí</title>
 </head>
 <body>
 
@@ -55,45 +12,36 @@
         <p>Informačný portál a podporné materiály pre rodičov a pedagógov</p>
     </header>
 
+    <hr>
+
     <main>
-        <section>
-            <h2>📚 Kategórie článkov</h2>
+        <h2>📚 Kategórie článkov</h2>
 
-            <!-- Kategória 1 -->
-            <h3>🧩 Autizmus (PAS)</h3>
-            <ul>
-                <li><a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a></li>
-            </ul>
+        <h3>🧩 Autizmus (PAS)</h3>
+        <ul>
+            <li><a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a></li>
+        </ul>
 
-            <!-- Kategória 2 -->
-            <h3>⚡ ADHD a pozornosť</h3>
-            <ul>
-                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
-            </ul>
+        <h3>⚡ ADHD a pozornosť</h3>
+        <p><em>Zatiaľ tu nie sú žiadne články.</em></p>
 
-            <!-- Kategória 3 -->
-            <h3>🌱 Rozvoj a učenie</h3>
-            <ul>
-                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
-            </ul>
+        <h3>🌱 Rozvoj a učenie</h3>
+        <p><em>Zatiaľ tu nie sú žiadne články.</em></p>
 
-            <!-- Kategória 4 -->
-            <h3>✍️ Dysgrafia</h3>
-            <ul>
-                <li><span style="color: #7f8c8d; font-style: italic;">Pripravujeme nové články...</span></li>
-            </ul>
-        </section>
+        <h3>✍️ Dysgrafia</h3>
+        <p><em>Zatiaľ tu nie sú žiadne články.</em></p>
     </main>
 
-    <!-- Kontaktný formulár -->
+    <hr>
+
     <section>
         <h2>📩 Kontaktujte nás</h2>
         <form name="contact" method="POST" data-netlify="true">
             <p>
-                <label>Váš e-mail:<br><input type="email" name="email" required></label>
+                <label>Váš e-mail: <br><input type="email" name="email" required></label>
             </p>
             <p>
-                <label>Správa:<br><textarea name="message" rows="4" required></textarea></label>
+                <label>Správa: <br><textarea name="message" required></textarea></label>
             </p>
             <p>
                 <button type="submit">Odoslať</button>

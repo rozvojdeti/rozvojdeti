@@ -3,37 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zmyslové vnímanie detí | Rozvoj detí</title>
+    <title>Zmyslové vnímanie a potreby detí | Rozvoj detí</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #0d9488;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --highlight-bg: #f0fdf4;
+            --warning-bg: #fffbeb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #99f6e4;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .article-container {
+            max-width: 850px;
+            background: var(--card-bg);
+            margin: -35px auto 50px auto;
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .info-box {
+            background-color: var(--highlight-bg);
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .warning-box {
+            background-color: var(--warning-bg);
+            border: 1px solid #f8e7b9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 850px;
+            margin: 0 auto 40px auto;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-    <article>
+    <header>
+        <a href="../index.html" class="back-link">&larr; Späť na hlavnú stránku</a>
         <h1>Zmyslové vnímanie a potreby detí</h1>
+    </header>
 
-        <p>Pre niektoré deti môže byť bežný deň plný podnetov náročný.</p>
+    <div class="article-container">
+        <p class="lead">Ako porozumieť senzorickým prejavom a správne reagovať na potreby dieťaťa v každodennom živote.</p>
 
-        <p>Hluk, jasné svetlo, dotyky, vône alebo množstvo ľudí môžu niektoré deti vnímať veľmi intenzívne. Iné deti naopak vyhľadávajú pohyb, tlak či určité zmyslové podnety.</p>
+        <p>Každé dieťa vníma svet okolo seba prostredníctvom svojich zmyslov. Kým pre väčšinu ľudí sú bežné zvuky, svetlá, dotyky či pachy úplnou samozrejmosťou, u detí so špecifickými vývinovými potrebami – vrátane detí s autizmom (PAS) či ADHD – môže byť spracovanie senzorických podnetov radikálne odlišné. To, čo jeden človek takmer nevníma, môže byť pre druhé dieťa zdrojom obrovského stresu, fyzickej bolesti, alebo naopak, vyvolávať neustálu nutkavú túžbu po ďalších podnetoch.</p>
+        
+        <p>Hlbšie porozumenie tomu, ako funguje senzorické vnímanie, je absolútnym kľúčom k vytvoreniu bezpečného, harmonického a podporného prostredia doma, v škôlke aj v škole.</p>
 
-        <p>Takéto potreby sa môžu objavovať napríklad u detí s autizmom alebo ADHD, ale aj u ďalších detí.</p>
-
-        <h2>💡 Ako môžeme pomôcť?</h2>
-
+        <h2>1. Zmysly, o ktorých sa v škole bežne neučí</h2>
+        <p>Tradične nás učia o piatich základných zmysloch: zrak, sluch, čuch, chuť a hmat. Naše telo a nervová sústava však neustále pracujú s ďalšími dvoma kľúčovými vnútornými zmyslovými systémami, ktoré obrovskou mierou ovplyvňujú správanie, pozornosť a celkovú pohodu dieťaťa:</p>
+        
         <ul>
-            <li>Všímajme si, ktoré podnety dieťa preťažujú.</li>
-            <li>Ponúknime mu pokojné miesto na oddych.</li>
-            <li>Umožnime vhodné pohybové prestávky.</li>
-            <li>Rešpektujme citlivosť na hluk, svetlo alebo dotyky.</li>
-            <li>Pripravujme dieťa na rušné prostredie.</li>
-            <li>Pri výrazných ťažkostiach sa poraďme s odborníkom.</li>
+            <li><strong>Vestibulárny systém (rovnováha a pohyb):</strong> Má sídlo vo vnútornom uchu a neustále informuje mozog o polohe hlavy v priestore, o pohybe, gravitácii a rovnováhe. Určuje, ako dieťa toleruje a spracováva hojdanie, točenie, beh či obyčajnú zmenu polohy tela.</li>
+            <li><strong>Propriocepcia (polohocit a vnímanie tela):</strong> Špecifické receptory umiestnené v svaloch, šľachách a kĺboch posielajú mozgu informácie o tom, kde sa nachádzajú jednotlivé časti nášho tela a akú fyzickú silu musíme vynaložiť pri rôznych úkonoch (napr. pri držaní skleneného pohára verzus silnom tlačení na ceruzku pri písaní).</li>
         </ul>
 
-        <p>Cieľom nie je dieťa nútiť, aby všetko znášalo. Cieľom je pomôcť mu cítiť sa bezpečnejšie a zvládať každodenné situácie.</p>
+        <h2>2. Dva kľúčové extrémy: Hypersenzitivita vs. Hyposenzitivita</h2>
+        <p>Keď mozog nedokáže prichádzajúce podnety zo zmyslov správne filtrovať, organizovať a vyhodnocovať, hovoríme o <strong>poruche senzorickej integrácie</strong>. Tieto ťažkosti sa najčastejšie prejavujú v dvoch protikladných rovinách:</p>
 
-        <p><strong>Každé dieťa má svoje potreby. Keď ich pochopíme, dokážeme mu lepšie pomôcť.</strong></p>
+        <h3>A) Hypersenzitivita (Premrštená alebo nadmerná citlivosť)</h3>
+        <p>Dieťa reaguje na podnety oveľa intenzívnejšie ako ostatní. Jeho nervový systém je v neustálom stave poplachu, čo ho rýchlo vyčerpáva:</p>
+        <ul>
+            <li><strong>Zrak:</strong> Vadí mu ostré neoslňujúce svetlo, žiarivky, rýchle pohyby v okolí alebo presýtený vizuálny priestor (príliš veľa hračiek či plagátov na stene).</li>
+            <li><strong>Sluch:</strong> Intenzívne si zakrýva uši pri bežných zvukoch (vysávač, sušič rúk, štekot psa, hlasný hovor v triede alebo zvonenie).</li>
+            <li><strong>Hmat:</strong> Odmieta nosiť oblečenie s visačkami, prekážajú mu švy na ponožkách, neznáša dotyky s pieskom, farbami, plastelínou či mokrou trávou.</li>
+            <li><strong>Chuť a čuch:</strong> Je extrémne vyberavé v jedle, prekáža mu presná štruktúra, teplota alebo aj najjemnejší zápach z kuchyne.</li>
+            <li><strong>Pohyb:</strong> Má panický strach z výšok, bojí sa odlepiť nohy od zeme, neobľubuje hojdačky či kolotoče.</li>
+        </ul>
 
-        <hr>
-        <p><a href="index.html">← Späť na hlavnú stránku</a></p>
-    </article>
+        <h3>B) Hyposenzitivita (Znížená citlivosť)</h3>
+        <p>Nervový systém dieťaťa zachytáva podnety slabo, preto si ich samo aktívne vyhľadáva (tieto deti označujeme ako <em>senzorických vyhľadávačov</em>):</p>
+        <ul>
+            <li><strong>Pohyb a propriocepcia:</strong> Neustále sa točí, skáče, behá, naráža do stien alebo do ľudí, silno objíma, vyhľadáva tvrdé pády na zem či matrace.</li>
+            <li><strong>Hmat:</strong> Všetko potrebuje chytiť, ohmatať, fascinujú ho rôzne textúry, často má paradoxne vyšší prah bolesti.</li>
+            <li><strong>Zrak a sluch:</strong> Lákajú ho blikajúce svetlá, točiace sa predmety (kolesá áut, ventilátor), rado vydáva hlasné zvuky alebo si veci prikladá tesne k uchu.</li>
+        </ul>
+
+        <h2>3. Ako sa senzorické preťaženie prejavuje v správaní?</h2>
+        <p>Ak je okolitých podnetov priveľa a nervový systém dieťaťa vyčerpá svoju kapacitu, dochádza k <strong>senzorickému preťaženiu (overload)</strong>. Okolie si tieto prejavy často mýli s nevychovanosťou, hnevom či vzdorom. Najčastejšie formy prejavov sú:</p>
+        
+        <ul>
+            <li><strong>Meltdown (Senzorický výbuch):</strong> Ide o úplne neovládateľnú reakciu nervovej sústavy. Dieťa kričí, plače, kope alebo sa hádže o zem. Na rozdiel od bežného detského trucovania ho v tejto chvíli nedokážeme upokojiť dohováraním ani trestom.</li>
+            <li><strong>Shutdown (Útlmová reakcia):</strong> Dieťa sa uzavrie do seba, prestane komunikovať a reagovať na vonkajšie podnety, pôsobí apaticky alebo unavene. Ide o obrannú reakciu mozgu.</li>
+            <li><strong>Stimming (Autostimulačné správanie):</strong> Opakované mechanické pohyby (mávanie rukami, točenie sa, kývanie, vydávanie zvukov), ktorými si dieťa pomáha sám regulovať vnútorné napätie a upokojiť sa.</li>
+        </ul>
+
+        <div class="warning-box">
+            <p style="margin: 0;"><strong>Dôležité upozornenie:</strong> Dieťa v stave meltdownu alebo hlbokého preťaženia nekoná manipulatívne. Jeho správanie je volaním o pomoc unaveného nervového systému, ktorý potrebuje okamžité upokojenie a bezpečný priestor.</p>
+        </div>
+
+        <h2>4. Praktické tipy: Ako správne reagovať a pomôcť?</h2>
+        
+        <h3>Úprava prostredia a prevencia</h3>
+        <ul>
+            <li><strong>Vytvorte tichý kútik:</strong> Miesto s minimom podnetov, tlmeným svetlom, vankúšmi a obľúbenou prikrývkou, kam sa dieťa môže kedykoľvek stiahnuť.</li>
+            <li><strong>Eliminujte rušivé vplyvy:</strong> Využívajte slúchadlá tlmiace hluk v hlučnom prostredí a vyhnite sa agresívnym umelým svetlám.</li>
+            <li><strong>Pohodlné oblečenie:</strong> Strihajte visačky, kupujte oblečenie z mäkkej bavlny bez drsných vnútorných švov.</li>
+        </ul>
+
+        <h3>Využitie hlbokého tlaku (Deep Pressure Therapy)</h3>
+        <p>Tlak na svalstvo a kĺby preukázateľne upokojuje nervovú sústavu:</p>
+        <ul>
+            <li>Použitie zaťažkávacích viest, diek alebo pevných objatí.</li>
+            <li>Aktivity ako nosenie ťažších nákupov, tlačenie kočíka, lezenie po štyroch či skákanie na trampolíne.</li>
+        </ul>
+
+        <h3>Ako zvládnuť akútny výbuch (Meltdown)</h3>
+        <ol>
+            <li><strong>Zachovajte chladnú hlavu:</strong> Vaša vlastná vnútorná stabilita pomáha stabilizovať preťažené dieťa.</li>
+            <li><strong>Odstráňte spúšťač:</strong> Zhasnite, vypnite hluk, odveďte dieťa z preplneného miesta do ticha.</li>
+            <li><strong>Minimalizujte slová:</strong> Preťažený mozgo-svalový systém nedokáže spracovávať zložité vety. Hovorte ticho, minimálne a buďte prítomní.</li>
+        </ol>
+
+        <h2>Záver</h2>
+        <p>Senzorické prejavy nie sú zlyhaním výchovy, ale oknom do toho, ako dieťa prežíva a spracováva okolitý svet. Keď pochopíme jeho skutočné senzorické potreby, dokážeme ho prestať trestať za to, za čo nemôže, a poskytnúť mu bezpečnú oporu pre jeho zdravý rozvoj.</p>
+    </div>
+
+    <footer>
+        <p>Máte otázky alebo podnety? Napíšte nám na: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
+    </footer>
 
 </body>
 </html>

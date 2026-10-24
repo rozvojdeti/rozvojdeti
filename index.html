@@ -3,173 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O autizme | Rozvoj detí</title>
+    <title>Rozvoj detí | Odborný portál pre rodičov a pedagógov</title>
     <style>
         :root {
-            --primary-color: #023e8a;
-            --secondary-color: #0077b6;
-            --accent-color: #90e0ef;
-            --bg-color: #f4f7f6;
-            --content-bg: #ffffff;
-            --text-color: #2b2d42;
-            --text-muted: #6c757d;
-            --border-color: #dee2e6;
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #0d9488;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
             background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
         }
 
-        /* HLAVIČKA */
+        /* BANNER / NAVIGÁCIA */
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
             color: white;
-            padding: 30px 20px;
-            border-bottom: 5px solid var(--secondary-color);
-        }
-
-        .header-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            text-align: center;
+            padding: 60px 20px 80px 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
-        .back-link {
-            color: var(--accent-color);
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* KONTAJNER OBSAHU */
+        .container {
+            max-width: 1140px;
+            margin: -40px auto 50px auto;
+            padding: 0 20px;
+        }
+
+        /* SEKCIA KATEGÓRIE */
+        .category-block {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* MRIEŽKA KARIET */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .card-title a {
+            color: var(--text-dark);
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: bold;
+            transition: color 0.2s;
         }
 
-        .back-link:hover {
+        .card-title a:hover {
+            color: var(--primary-light);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
             text-decoration: underline;
         }
 
-        /* HLAVNÉ ROZLOŽENIE (STRÁNKA + BOČNÝ PANEL) */
-        .wrapper {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 30px;
+        /* KARTA PRE PRIPRAVOVANÉ ČLÁNKY */
+        .article-card.placeholder {
+            opacity: 0.75;
+            border-style: dashed;
         }
 
-        @media (max-width: 768px) {
-            .wrapper {
-                grid-template-columns: 1fr;
-            }
+        .article-card.placeholder img {
+            filter: grayscale(30%);
         }
 
-        /* BOČNÉ MENU (SIDEBAR) */
-        aside {
-            background: var(--content-bg);
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            height: fit-content;
-        }
-
-        aside h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.1rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-
-        aside ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        aside li {
-            margin-bottom: 10px;
-        }
-
-        aside a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            display: block;
-            padding: 6px 10px;
-            border-radius: 4px;
-            transition: background 0.2s;
-        }
-
-        aside a:hover, aside a.active {
-            background-color: #eef4f8;
+        .tag-coming-soon {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: 0.75rem;
             font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            width: fit-content;
         }
 
-        /* HLAVNÝ OBSAH (ARTICLE) */
-        main {
-            background: var(--content-bg);
-            padding: 40px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        /* FORMULÁR */
+        .contact-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
         }
 
-        main h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 0;
-            border-bottom: 1px solid var(--border-color);
+        .contact-section h2 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
             padding-bottom: 10px;
         }
 
-        main h3 {
-            color: var(--secondary-color);
-            margin-top: 30px;
+        .form-group {
+            margin-bottom: 18px;
         }
 
-        p {
-            margin-bottom: 20px;
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-dark);
         }
 
-        ul, ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
+        form input, form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background-color: #fff;
+            transition: border-color 0.2s;
         }
 
-        li {
-            margin-bottom: 8px;
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
         }
 
-        /* ZVÝRAZNENÝ BOX */
-        .info-box {
-            background-color: #f1f8fc;
-            border-left: 4px solid var(--secondary-color);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
+        form button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        form button:hover {
+            background-color: var(--primary-light);
         }
 
         /* PÄTIČKA */
         footer {
-            background-color: #212529;
-            color: white;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            padding: 25px 20px;
-            margin-top: 50px;
-            font-size: 0.9rem;
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         footer a {
-            color: var(--accent-color);
+            color: var(--primary-light);
             text-decoration: none;
+            font-weight: 600;
         }
 
         footer a:hover {
@@ -179,59 +264,134 @@
 </head>
 <body>
 
+    <!-- HLAVIČKA WEBU -->
     <header>
-        <div class="header-container">
-            <a href="../index.html" class="back-link">&larr; Späť na hlavnú stránku portálu</a>
-            <h1>Rozvoj detí &ndash; Odborné informácie</h1>
-        </div>
+        <h1>Rozvoj detí</h1>
+        <p>Informačný portál, odborné články a podporné materiály pre rodičov a pedagógov</p>
     </header>
 
-    <div class="wrapper">
-        <!-- BOČNÉ MENU -->
-        <aside>
-            <h3>Témy a sekcie</h3>
-            <ul>
-                <li><a href="#" class="active">Čo je autizmus</a></li>
-                <li><a href="#">Diagnostika a prejavy</a></li>
-                <li><a href="#">Zmyslové vnímanie</a></li>
-                <li><a href="#">Vzdelávanie a škola</a></li>
-                <li><a href="#">Poradenstvo a pomoc</a></li>
-            </ul>
-        </aside>
+    <div class="container">
 
-        <!-- OBSAH ČLÁNKU -->
-        <main>
-            <h2>Čo je autizmus</h2>
-            <p><strong>Autizmus</strong> (alebo poruchy autistického spektra &ndash; PAS) je celoživotná vývinová porucha, ktorá ovplyvňuje spôsob, akým človek komunikuje, chápe okolitý svet a nadväzuje vzťahy s inými ľuďmi.</p>
-
-            <div class="info-box">
-                <p style="margin: 0;"><strong>Vedeli ste, že?</strong> Podľa aktuálnych štatistík sa poruchy autistického spektra prejavujú približne u 1 zo 100 detí. Ide o stav, ktorý nie je chorobou, ale iným nastavením nervovej sústavy.</p>
+        <!-- 1. KATEGÓRIA: AUTIZMUS (PAS) -->
+        <section class="category-block">
+            <div class="category-header">
+                <h2 class="category-title">🧩 Autizmus (PAS)</h2>
             </div>
+            <div class="articles-grid">
 
-            <h3>Hlavné oblasti postihnutia</h3>
-            <p>Prejavy autizmu sú veľmi rôznorodé, no tradične sa hovorí o troch kľúčových oblastiach (tzv. triáda postihnutia):</p>
-            <ul>
-                <li><strong>Sociálna interakcia:</strong> Ťažkosti pri nadväzovaní očného kontaktu, nerozpoznávanie emócií iných ľudí, tendencia vyhľadávať samotu.</li>
-                <li><strong>Sociálna komunikácia:</strong> Oneskorený vývin reči, doslovné chápanie slov, alebo absencia reči (u neverbálnych detí), pričom využívajú alternatívne spôsoby komunikácie.</li>
-                <li><strong>Sociálna predstavivosť:</strong> Preferencia rutiny, lipnutie na rovnakých pravidlách, stereotypné správanie a obmedzené, no často veľmi hlboké záujmy.</li>
-            </ul>
+                <!-- Článok 1 -->
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=600&q=80" alt="Zmyslové vnímanie">
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="pas/zmyslove-vnimanie.html">Zmyslové vnímanie a potreby detí</a></h3>
+                        <p class="card-desc">Ako porozumieť senzorickým prejavom a správne reagovať na potreby dieťaťa.</p>
+                        <a href="pas/zmyslove-vnimanie.html" class="read-more">Čítať článok &rarr;</a>
+                    </div>
+                </article>
 
-            <h3>Prečo hovoríme o „spektre“?</h3>
-            <p>Každý človek s autizmom je jedinečný. Niektorí ľudia s PAS potrebujú celoživotnú podporu a asistenciu pri každodenných úkonoch, kým iní (často s Aspergerovým syndrómom) sú samostatní, majú bežnú alebo nadpriemernú inteligenciu, no čelia výzvam v sociálnych situáciách.</p>
+                <!-- Článok 2 -->
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80" alt="Čo je autizmus">
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="pas/co-je-autizmus.html">Čo je autizmus?</a></h3>
+                        <p class="card-desc">Definícia, základné typy, klasifikácia a ako autizmus ovplyvňuje vnímanie sveta.</p>
+                        <a href="pas/co-je-autizmus.html" class="read-more">Čítať článok &rarr;</a>
+                    </div>
+                </article>
 
-            <h3>Ako pristupovať k deťom s autizmom?</h3>
-            <ol>
-                <li><strong>Zabezpečte predvídateľnosť:</strong> Pomocou denného režimu, vizuálnych harmonogramov a obrázkov.</li>
-                <li><strong>Buďte trpezliví v komunikácii:</strong> Hovorte jasne, vecne, vyhnite sa irónii a metaforám.</li>
-                <li><strong>Rešpektujte ich zmysulné vnímanie:</strong> Uvedomte si, že hluk, ostré svetlo alebo dotyky môžu u dieťaťa vyvolať obrovský stres.</li>
-            </ol>
-        </main>
+            </div>
+        </section>
+
+        <!-- 2. KATEGÓRIA: ADHD A POZORNOSŤ -->
+        <section class="category-block">
+            <div class="category-header">
+                <h2 class="category-title">⚡ ADHD a pozornosť</h2>
+            </div>
+            <div class="articles-grid">
+
+                <!-- Pripravovaný článok -->
+                <article class="article-card placeholder">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Sústredenie">
+                    <div class="card-body">
+                        <h3 class="card-title">Ako udržať pozornosť pri učení</h3>
+                        <p class="card-desc">Jednoduché techniky a úpravy prostredia pre školákov s ADHD.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </article>
+
+                <article class="article-card placeholder">
+                    <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=600&q=80" alt="Pohybové prestávky">
+                    <div class="card-body">
+                        <h3 class="card-title">Pohybové prestávky a ich význam</h3>
+                        <p class="card-desc">Ako efektívne vybiť nahromadenú energiu pred plnením úloh.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 3. KATEGÓRIA: ROZVOJ A UČENIE -->
+        <section class="category-block">
+            <div class="category-header">
+                <h2 class="category-title">🌱 Rozvoj a učenie</h2>
+            </div>
+            <div class="articles-grid">
+
+                <article class="article-card placeholder">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Jemná motorika">
+                    <div class="card-body">
+                        <h3 class="card-title">Hry na podporu jemnej motoriky</h3>
+                        <p class="card-desc">Zábavné a stimulujúce aktivity pre predškolákov a mladších žiakov.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 4. KATEGÓRIA: DYSGRAFIA -->
+        <section class="category-block">
+            <div class="category-header">
+                <h2 class="category-title">✍️ Dysgrafia</h2>
+            </div>
+            <div class="articles-grid">
+
+                <article class="article-card placeholder">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Písanie">
+                    <div class="card-body">
+                        <h3 class="card-title">Správny úchop pera a cvičenia</h3>
+                        <p class="card-desc">Ako pomôcť deťom, ktoré pociťujú únavu a bolesť pri písaní.</p>
+                        <span class="tag-coming-soon">Pripravujeme</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- KONTAKTNÝ FORMULÁR -->
+        <section class="contact-section">
+            <h2>📩 Napíšte nám správu</h2>
+            <form name="contact" method="POST" data-netlify="true">
+                <div class="form-group">
+                    <label for="email">Váš e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="napriklad@email.sk">
+                </div>
+                <div class="form-group">
+                    <label for="message">Správa:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Napíšte nám vašu otázku alebo podnet..."></textarea>
+                </div>
+                <button type="submit">Odoslať správu</button>
+            </form>
+        </section>
+
+        <!-- PÄTIČKA -->
+        <footer>
+            <p>Ak nám chcete napísať, kontaktujte nás emailom: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #a0aec0;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
+        </footer>
+
     </div>
-
-    <footer>
-        <p>Máte otázky alebo potrebujete poradiť? Kontaktujte nás na: <a href="mailto:web.zdravie@gmail.com">web.zdravie@gmail.com</a></p>
-        <p style="margin-top: 10px; color: #adb5bd;">&copy; 2026 Rozvoj detí. Všetky práva vyhradené.</p>
-    </footer>
 
 </body>
 </html>

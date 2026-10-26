@@ -1,0 +1,169 @@
+body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        color: var(--dark-text);
+        background-color: var(--light-bg);
+        margin: 0;
+        padding: 20px;
+    }
+
+    article {
+        max-width: 850px;
+        margin: 40px auto;
+        background: var(--card-bg);
+        padding: 45px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--border-color);
+    }
+
+    h1 {
+        color: var(--primary-color);
+        font-size: 2.3rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        color: #111827;
+        font-size: 1.6rem;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        color: #374151;
+        font-size: 1.25rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 1.25rem;
+    }
+
+    ul, ol {
+        margin-bottom: 1.25rem;
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    blockquote {
+        background-color: var(--accent-quote);
+        border-left: 4px solid var(--primary-color);
+        margin: 25px 0;
+        padding: 15px 20px;
+        font-style: italic;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box {
+        background-color: #f3f4f6;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    .highlight-box h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+
+    footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.9rem;
+        color: #6b7280;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        article {
+            padding: 20px;
+            margin: 10px auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+<p>Porucha autistického spektra (PAS) predstavuje jednu z najkomplexnejších a najčastejšie diskutovaných tém v modernej neurológii, psychológii a špeciálnej pedagogike. Hoci sa o autizme hovorí čoraz viac, v spoločnosti stále pretrváva množstvo mýtov a nepochopenia. Autizmus nie je choroba v tradičnom zmysle slov – nedá sa nakaziť, nedá sa „vyliečiť“ liekmi a nie je výsledkom zlej výchovy. Ide o inakosť vo vývine mozgu, ktorá zásadne mení to, ako človek spracováva informácie, komunikuje a vníma svet okolo seba.</p>
+
+<h2>1. Definícia autizmu: Neurovývinová odlišnosť</h2>
+<p><strong>Autizmus</strong>, odborne označovaný ako <strong>Porucha autistického spektra (PAS)</strong>, je celoživotná neurovývinová podmienka. Pojem „spektrum“ je v tejto definícii kľúčový: naznačuje, že autizmus sa u každého jedinca prejavuje unikátnym spôsobom a v rôznej intenzite. Medzi odborníkmi sa často používa výrok: <em>„Ak poznáte jedného človeka s autizmom, poznáte len jedného človeka s autizmom.“</em></p>
+
+<p>Hlavné vlastnosti, ktoré spájajú ľudí na autistickom spektre, sa zvyčajne prejavujú v troch kľúčových oblastiach (tzv. triáda poškodení):</p>
+<ul>
+    <li><strong>Sociálna interakcia:</strong> Ťažkosti s porozumením sociálnym pravidlám, nadväzovaním a udržiavaním vzťahov, čítaním reči tela a rešpektovaním neformálnych spoločenských konvencií.</li>
+    <li><strong>Komunikácia:</strong> Rozdiely vo vývine reči, nepochopenie metafór, irónie či sarkazmu, doslovné chápanie jazyka a ťažkosti pri obojstrannej konverzácii.</li>
+    <li><strong>Predstavivosť a flexibilita:</strong> Sklon k opakujúcemu sa správaniu (stereotypie), silná potreba rutiny, intenzívne a vyhranené záujmy a ťažkosti pri adaptácii na nečakané zmeny.</li>
+</ul>
+
+<h2>2. Vývin klasifikácie autizmu: Od separátnych diagnóz k spektru</h2>
+<p>Pohľad na autizmus sa v priebehu posledných desaťročí výrazne zmenil. V minulosti sa používala Medzinárodná klasifikácia chorôb (MKCH-10), ktorá autizmus delila na niekoľko samostatných kategórií:</p>
+
+<ul>
+    <li><strong>Detský autizmus (Kannerov syndróm):</strong> Klasická forma autizmu, často spojená s výrazným opozdením vo vývine reči a v niektorých prípadoch aj s intelektovým znevýhodnením.</li>
+    <li><strong>Aspergerov syndróm:</strong> Forma autizmu, pri ktorej nie je prítomné intelektové znevýhodnenie a rečový vývin prebieha v obvyklom čase. Ľudia s Aspergerovým syndrómom majú často vysoký intelekt a hlboké vedomosti v špecifických oblastiach, no čelia výrazným výzvam v sociálnej oblasti.</li>
+    <li><strong>Atypický autizmus:</strong> Diagnostikoval sa vtedy, keď prejavy nesplnili všetky kritériá pre detský autizmus (napr. sa prejavili až po 3. roku života alebo chýbala niektorá zo zložiek triády).</li>
+    <li><strong>Rettov syndróm a Iná dezintegračná porucha v detstve:</strong> Vzácne podmienky spojené s regresom vo vývine.</li>
+</ul>
+
+<div class="highlight-box">
+    <h3>Moderný prístup (MKCH-11 a DSM-5)</h3>
+    <p>V súčasnosti najnovšie diagnostické manuály (ako MKCH-11 a americká DSM-5) upustili od delenia na čiastkové diagnózy ako Aspergerov syndróm či detský autizmus. Všetky tieto prejavy spadajú pod jednu strešnú diagnózu: <strong>Porucha autistického spektra (PAS)</strong>.</p>
+    <p>Špecifikuje sa najmä <strong>miera potreby podpory</strong> (od ľahkej po intenzívnu celodennú starostlivosť) a prítomnosť alebo absencia intelektového znevýhodnenia či poruchy reči.</p>
+</div>
+
+<h2>3. Ako autizmus ovplyvňuje vnímanie sveta?</h2>
+<p>Aby sme pochopili správanie autistických ľudí, musíme porozumieť tomu, ako ich mozog spracováva vnemy z okolitého prostredia. Vnímanie sveta u autistov sa od typického vnímania líši v niekoľkých kľúčových aspektoch:</p>
+
+<h3>A. Senzorické spracovanie (Zmyslové vnímanie)</h3>
+<p>Väčšina ľudí na spektre má odlišné zmyslové vnímanie. Ich mozoček dokáže len ťažko filtrovať podnety z okolia, čo vedie ku dvom hlavným stavom:</p>
+<ul>
+    <li><strong>Hypersenzitivita (Precitlivenosť):</strong> Bežné zvuky (hluk premávky, vysávač, šuchot papierov) môžu autistickému človeku spôsobovať fyzickú bolesť. Svetlá môžu byť príliš ostré, určité materiály oblečenia neznesiteľné a pachy intenzívne nepríjemné.</li>
+    <li><strong>Hyposenzitivita (Znížená citlivosť):</strong> Človek vyhľadáva silné zmyslové podnety – napríklad rýchle otáčanie sa, kývanie sa, sledovanie svetiel alebo vyhľadávanie hlbokého tlaku na telo.</li>
+</ul>
+
+<blockquote>
+    „Predstavte si, že váš mozog nemá filter. Zatiaľ čo väčšina ľudí dokáže ignorovať tikot hodín, hluk chladničky a blikanie žiarovky, človek s autizmom vníma všetky tieto podnety naraz v plnej hlasitosti.“
+</blockquote>
+
+<h3>B. Detailné vs. Globálne vnímanie (Central Coherence)</h3>
+<p>Kým väčšina ľudí vníma situácie „z nadhľadu“ (najprv si všimnú celok a až potom detaily), autistický mozog funguje často opačne. Sústredí sa na detaily a len postupne z nich skladá celkový obraz. Tento spôsob myslenia prináša obrovskú precíznosť, schopnosť všimnúť si chyby či vzorce, ktoré iným unikajú, no zároveň môže sťažovať rýchle pochopenie celkového kontextu situation.</p>
+
+<h3>C. Sociálne vnímanie a „Teória mysle“ (Theory of Mind)</h3>
+<p>Ľudia s autizmom často inak spracovávajú sociálne signály. Zatiaľ čo neurotypickí ľudia podvedome čítajú z tváre druhých emócie, autisti sa musia tieto pravidlá učiť logicky a vedome. Ťažkosti s tzv. <em>Teóriou mysle</em> znamenajú, že je pre nich náročnejšie intuitívne odhadnúť, čo si druhý človek myslí, čo érne cíti alebo čo od nich očakáva, ak to nie je povedané priamo.</p>
+
+<h2>4. Mýty vs. Realita o autizme</h2>
+<ol>
+    <li><strong>Mýtus: Autistickí ľudia nemajú emócie a nechcú vzťahy.</strong><br>
+    <em>Realita:</em> Ľudia s autizmom cítia emócie rovnako hlboko ako kedykoľvek iný, často dokonca intenzívnejšie. Mnohí túžia po priateľstve a vzťahoch, len majú problém nadviazať ich spôsobom, ktorý spoločnosť považuje za „bežný“.</li>
+    
+    <li><strong>Mýtus: Všetci autisti sú geniálni matematici alebo umelci (ako vo filme Rain Man).</strong><br>
+    <em>Realita:</em> Špeciálne schopnosti (tzv. savantizmus) sa vyskytujú len u malej časti autistickej populácie. Väčšina ľudí s autizmom má unikátnu kombináciu silných stránok a oblastí, v ktorých potrebuje podporu.</li>
+
+    <li><strong>Mýtus: Autizmus je spôsobený očkovaním alebo nesprávnou výchovou.</strong><br>
+    <em>Realita:</em> Vedecký výskum opakovane a jednoznačne vyvrátil akúkoľvek spojitosť medzi očkovaním a autizmom. Autizmus má genetický a neurobiologický základ.</li>
+</ol>
+
+<h2>Záver</h2>
+<p>Autizmus nie je prekážkou pre plnohodnotný a šťastný život, ak spoločnosť dokáže vytvoriť prostredie plné pochopenia, akceptácie a primeranej podpory. Namiesto toho, aby sme sa snažili autistických ľudí „prerobiť“ na obraz väčšiny, je dôležité porozumieť ich jedinečnému vnímaniu sveta. Ich iný pohľad na detail, logické myslenie a úprimnosť sú často obrovským prínosom pre celú spoločnosť.</p>
+
+<footer>
+    <p>&copy; Informačný článok o Poruchách autistického spektra (PAS).</p>
+</footer>
